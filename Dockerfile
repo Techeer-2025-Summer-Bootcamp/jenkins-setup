@@ -15,16 +15,7 @@ RUN apt-get update && \
     npm \
     wget \
     openssh-client \
-    git \
-    && wget https://go.dev/dl/go1.23.0.linux-amd64.tar.gz \
-    && tar -C /usr/local -xzf go1.23.0.linux-amd64.tar.gz \
-    && rm go1.23.0.linux-amd64.tar.gz
-
-# Set Go path
-ENV PATH="/usr/local/go/bin:${PATH}"
-
-# Install golangci-lint
-RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b /usr/local/bin v1.60.1
+    git
 
 # Add Docker's GPG key
 RUN mkdir -p /etc/apt/keyrings && \
