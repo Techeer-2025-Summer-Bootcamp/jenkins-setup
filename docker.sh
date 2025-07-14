@@ -19,4 +19,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sleep 2
 
+sudo usermod -aG docker $USER
+sudo usermod -aG docker ubuntu
+
 echo "Docker installed successfully"
